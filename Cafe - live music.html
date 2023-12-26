@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Nama Kafe Anda</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU5x41w-7zDZ-HPXgXGFsTh8TvYNEZL6duwQ&usqp=CAU'); /* Ganti dengan nama file gambar Anda */
+            background-size: cover; /* Untuk menutupi seluruh area body */
+            background-position: center; /* Memastikan gambar selalu berada di tengah */
+            color: #ecf0f1; /* Warna teks yang kontras dengan latar belakang */
+        }
+
+        header {
+            background-image: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAYT8pKIztWGd-ReXWXeRQb8PFOUEYASLdqQ&usqp=CAU'); /* Ganti dengan nama file gambar header Anda */
+            background-size: cover; /* Untuk menutupi seluruh area header */
+            background-position: center; /* Memastikan gambar selalu berada di tengah */
+            color: #ecf0f1;
+            padding: 1rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px; /* Tambahkan margin-top agar tidak menempel langsung dengan header */
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        section {
+            padding: 2rem;
+            flex: 1;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 1rem;
+            width: 100%;
+            margin-top: auto; /* Pastikan footer selalu di bawah section */
+            background-image: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAYT8pKIztWGd-ReXWXeRQb8PFOUEYASLdqQ&usqp=CAU'); /* Ganti dengan nama file gambar header Anda */
+            background-size: cover; /* Untuk menutupi seluruh area header */
+            
+        }
+
+        /* Menggantikan aturan media query untuk menampilkan kembali menu pada layar kecil */
+@media only screen and (max-width: 768px) {
+    nav li {
+        display: inline; /* Mengubah display ke inline */
+        margin: 0 10px;
+    }
+
+    nav ul {
+        display: inline; /* Menambahkan display inline pada ul */
+    }
+
+    nav.active ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #2c3e50;
+        z-index: 2;
+    }
+
+    nav.active li {
+        margin: 10px 0;
+    }
+}
+#LM {
+    display: none;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cafe Simpang Telu</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#contact">Kontak</a></li>
+                <li><a href="#LM">Live Music</a></li>
+            
+    
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Konten Kafe -->
+    <section id="menu">
+        <h2>Menu</h2>
+        <a href="https://ibb.co/BshtQTG"><img src="https://i.ibb.co/dKNrVkt/IMG-20231226-WA0007.jpg" alt="IMG-20231226-WA0007" style="width: 100%;"></a>
+    <a href="https://ibb.co/HYFCst3"><img src="https://i.ibb.co/DkVYy9T/IMG-20231226-WA0008.jpg" alt="IMG-20231226-WA0008" style="width: 100%;"></a>
+    <a href="https://ibb.co/h7n86VR"><img src="https://i.ibb.co/yfMs9qn/IMG-20231226-WA0006.jpg" alt="IMG-20231226-WA0006" style="width: 100%;"></a>
+    <a href="https://ibb.co/VQPd9hs"><img src="https://i.ibb.co/rc1g0LV/IMG-20231226-WA0009.jpg" alt="IMG-20231226-WA0009" style="width: 100%;"></a>
+    <a href="https://ibb.co/dP7HHxr"><img src="https://i.ibb.co/c6xssV1/IMG-20231226-WA0010.jpg" alt="IMG-20231226-WA0010" style="width: 100%;"></a>
+    </section>
+
+    <section id="about">
+      <section id="about">
+    <h2>Tentang Kami</h2>
+    <p>
+        Cafe Simpang Telu adalah tempat yang menyajikan berbagai macam hidangan lezat dan kopi berkualitas tinggi.
+        Nikmati suasana yang nyaman dan layanan ramah dari tim kami. Kami berkomitmen untuk memberikan pengalaman kuliner yang tak terlupakan.
+    </p>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR76pSRbRfkyKevuMvplxPPKtGPyBo48Kr8FQ&usqp=CAU" alt="Interior Cafe" style="width: 100%; max-width: 600px; margin-top: 20px;">
+</section>
+
+         </section>
+
+    <section id="contact">
+    <h2>Kontak</h2>
+    <div>
+        <p>
+            <strong>Lokasi:</strong>
+            <a href="https://maps.app.goo.gl/7RT4r1DZbtrmhSs7A" target="_blank">Simpang 3 Rogojampi</a>
+        </p>
+        <p>
+            <strong>No WA:</strong>
+            <a href="https://wa.me/628113702233" target="_blank">08113702233</a>
+        </p>
+        <p>
+            <strong>Jadwal Buka:</strong> Mon - Fri 9.00-17.00
+        </p>
+    </div>
+    
+</section>
+      
+       <section id="LM">
+    <div>
+        <h2>Live Music</h2>
+        
+    </div>
+</section>
+
+
+    <footer>
+        <p>&copy; 2023 Cafe Simpang Telu. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const menuSection = document.getElementById('menu');
+    const aboutSection = document.getElementById('about');
+    const contactSection = document.getElementById('contact');
+    const LMSection = document.getElementById('LM'); // Perbaikan 1
+
+    const menuLink = document.querySelector('a[href="#menu"]');
+    const aboutLink = document.querySelector('a[href="#about"]');
+    const contactLink = document.querySelector('a[href="#contact"]');
+    const LMLink = document.querySelector('a[href="#LM"]'); // Perbaikan 2
+
+    function showSection(section) {
+        menuSection.style.display = 'none';
+        aboutSection.style.display = 'none';
+        contactSection.style.display = 'none';
+        LMSection.style.display = 'none';
+
+        section.style.display = 'block';
+    }
+
+    menuSection.style.display = 'none';
+    contactSection.style.display = 'none';
+
+    menuLink.addEventListener('click', function () {
+        showSection(menuSection);
+    });
+
+    aboutLink.addEventListener('click', function () {
+        showSection(aboutSection);
+    });
+
+    contactLink.addEventListener('click', function () {
+        showSection(contactSection);
+    });
+
+    LMLink.addEventListener('click', function () { // Perbaikan 3
+        showSection(LMSection);
+    });
+});
+
+    </script>
+</body>
+</html>
+
