@@ -117,7 +117,51 @@
 #contact div p {
         margin-bottom: 10px; /* Sesuaikan dengan kebutuhan Anda */
     }
+#about h2 {
+    text-align: center;
+}
+
+#about p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#about img {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Ubah nilai sesuai kebutuhan atau biarkan sesuai preferensi Anda */
+    display: block;
+    margin: 20px auto; /* Memberi jarak atas dan bawah, serta memusatkan gambar */
+}
+
+#showGallery {
+    display: block;
+    margin: 20px auto; /* Memberikan margin atas dan bawah 20px, dan auto secara horizontal untuk menengahkan tombol */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #ecf0f1;
+    border: none;
+    border-radius: 5px;
+}
+#gallery img {
+    pointer-events: none;
+}
+
+
     </style>
+<script defer>
+    document.addEventListener('DOMContentLoaded', function () {
+        const showGalleryButton = document.getElementById('showGallery');
+        const gallerySection = document.getElementById('gallery');
+
+        showGalleryButton.addEventListener('click', function () {
+            gallerySection.style.display = 'block';
+        });
+    });
+</script>
+
 </head>
 <body>
     <header>
@@ -146,14 +190,32 @@
 
 
     <section id="about">
-      <section id="about">
+     
     <h2>Tentang Kami</h2>
           <br>
     <p>
         Cafe Simpang Telu adalah tempat yang menyajikan berbagai macam hidangan lezat dan kopi berkualitas tinggi.
         Nikmati suasana yang nyaman dan layanan ramah dari tim kami. Kami berkomitmen untuk memberikan pengalaman kuliner yang tak terlupakan.
     </p>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR76pSRbRfkyKevuMvplxPPKtGPyBo48Kr8FQ&usqp=CAU" alt="Interior Cafe" style="width: 100%; max-width: 600px; margin-top: 20px;">
+    
+
+    <!-- Tambahkan tombol Galeri -->
+<button id="showGallery">Lihat Galeri</button>
+
+<!-- Tambahkan elemen galeri dengan gambar-gambar -->
+<div id="gallery" style="display: none;">
+    <a href="https://ibb.co/YRXWKbP" style="pointer-events: none; cursor: default;"><img src="https://i.ibb.co/98hvfGc/IMG-20231227-WA0015.jpg" alt="IMG-20231227-WA0015" style="width: 100%; max-width: 600px; height: auto;"></a>
+    <a href="https://ibb.co/4WJk5fv" style="pointer-events: none; cursor: default;"><img src="https://i.ibb.co/H7XZk2w/IMG-20231227-WA0014.jpg" alt="IMG-20231227-WA0014" style="width: 100%; max-width: 600px; height: auto;"></a>
+    <a href="https://ibb.co/mGWFjhV" style="pointer-events: none; cursor: default;"><img src="https://i.ibb.co/SPC7jV4/IMG-20231227-WA0013.jpg" alt="IMG-20231227-WA0013" style="width: 100%; max-width: 600px; height: auto;"></a>
+    <a href="https://ibb.co/jL1DLhC" style="pointer-events: none; cursor: default;"><img src="https://i.ibb.co/VvPTvVF/IMG-20231227-WA0011.jpg" alt="IMG-20231227-WA0011" style="width: 100%; max-width: 600px; height: auto;"></a>
+    <a href="https://ibb.co/KXc0Mvh" style="pointer-events: none; cursor: default;"><img src="https://i.ibb.co/9Nm8F5g/IMG-20231227-WA0012.jpg" alt="IMG-20231227-WA0012" style="width: 100%; max-width: 600px; height: auto;"></a>
+    <a href="https://ibb.co/gJSzhXb" style="pointer-events: none; cursor: default;"><img src="https://i.ibb.co/Rc3zdMG/IMG-20231227-WA0010.jpg" alt="IMG-20231227-WA0010" style="width: 100%; max-width: 600px; height: auto;"></a>
+    <a href="https://ibb.co/bFxWYFT" style="pointer-events: none; cursor: default;"><img src="https://i.ibb.co/RN1vtNf/IMG-20231227-WA0009.jpg" alt="IMG-20231227-WA0009" style="width: 100%; max-width: 600px; height: auto;"></a>
+</div>
+
+
+
+
 </section>
 
          </section>
@@ -232,7 +294,9 @@
         showSection(LMSection);
     });
 });
+</script>
 
-    </script>
+    
+
 </body>
 </html>
