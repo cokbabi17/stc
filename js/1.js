@@ -14,7 +14,7 @@
 
         var tab = document.createElement('a');
         tab.setAttribute('href', episodeUrl);
-        tab.textContent = 'Episode ' + i;
+        tab.textContent = ' ' + i;
 
         // Jika URL halaman saat ini adalah URL tab, atur tab sebagai aktif
         if (currentPageUrl === episodeUrl) {
