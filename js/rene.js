@@ -1,5 +1,4 @@
-
-    // Jumlah episode
+// Jumlah episode
     var totalEpisodes = 21;
 
     // Tangkap elemen tabs
@@ -16,8 +15,8 @@
         tab.setAttribute('href', episodeUrl);
         tab.textContent = ' ' + i;
 
-        // Jika URL halaman saat ini adalah URL tab, atur tab sebagai aktif
-        if (currentPageUrl === episodeUrl) {
+        // Jika URL halaman saat ini cocok dengan URL tab, atur tab sebagai aktif
+        if (currentPageUrl.includes('/rene-' + i + '.html')) {
             tab.classList.add('active');
         }
 
