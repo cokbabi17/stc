@@ -8,17 +8,17 @@
     var currentPageUrl = window.location.href;
 
     // Buat tab-episode secara dinamis
-    for (var i = 1; i <= totalEpisodes; i++) {
+    for (var i = 86; i <= totalEpisodes; i++) {
         var episodeUrl = 'https://iqiyoo.blogspot.com/p/ss-' + i + '.html';
 
         var tab = document.createElement('a');
         tab.setAttribute('href', episodeUrl);
-        tab.textContent = ' ' + i;
+        tab.textContent = 'Episode ' + i;
 
-        // Jika URL halaman saat ini adalah URL tab, atur tab sebagai aktif
-        if (currentPageUrl === episodeUrl) {
+        // Jika URL halaman saat ini cocok dengan URL tab, atur tab sebagai aktif
+        if (currentPageUrl.includes('/ss-' + i + '.html')) {
             tab.classList.add('active');
         }
 
         tabsContainer.appendChild(tab);
-    } 
+    }
