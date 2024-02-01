@@ -23,9 +23,27 @@ function changeVideoSource(videoUrl) {
     iframe.src = videoUrl;
 }
 
+// Fungsi untuk mengubah konten halaman dan video
+function changeContentAndVideo(episodeNumber) {
+    // Ubah judul halaman sesuai dengan episode yang dipilih
+    document.title = "Renegade Immortal Episode " + episodeNumber;
+
+    // Ubah URL video yang dimuat di dalam iframe sesuai dengan episode yang dipilih
+    changeVideoSource(videoUrls[episodeNumber - 1]);
+
+    // Hapus kelas 'active' dari semua tab
+    tabsContainer.querySelectorAll('a').forEach(function(tab) {
+        tab.classList.remove('active');
+    });
+
+    // Tambahkan kelas 'active' ke tab yang sedang diklik
+    var selectedTab = tabsContainer.querySelector('a[href="#episode-' + episodeNumber + '"]');
+    selectedTab.classList.add('active');
+}
+
 // Buat tab-episode secara dinamis
 for (var i = 80; i <= totalEpisodes; i++) {
-    var episodeUrl = '../p/btth-' + i + '.html';
+    var episodeUrl = 'https://iqiyoo.blogspot.com/p/btth-' + i + '.html';
 
     var tab = document.createElement('a');
     tab.setAttribute('href', episodeUrl);
@@ -35,26 +53,16 @@ for (var i = 80; i <= totalEpisodes; i++) {
     tab.addEventListener('click', function(event) {
         event.preventDefault(); // Menghindari perilaku default dari link
 
-        // Panggil fungsi untuk mengubah sumber video dengan nomor episode yang sesuai
+        // Panggil fungsi untuk mengubah konten halaman dan video dengan nomor episode yang sesuai
         var episodeNumber = parseInt(this.textContent.trim());
-        var videoUrl = videoUrls[episodeNumber - 1];
-        changeVideoSource(videoUrl);
-
-        // Hapus kelas 'active' dari semua tab
-        tabsContainer.querySelectorAll('a').forEach(function(tab) {
-            tab.classList.remove('active');
-        });
-
-        // Tambahkan kelas 'active' ke tab yang sedang diklik
-        this.classList.add('active');
+        changeContentAndVideo(episodeNumber);
     });
 
     // Jika URL halaman saat ini cocok dengan URL tab, atur tab sebagai aktif
-    if (currentPageUrl.includes('/rene-' + i + '.html')) {
+    if (currentPageUrl.includes('/btth-' + i + '.html')) {
         tab.classList.add('active');
         // Jika URL halaman saat ini cocok dengan URL tab, atur sumber video iframe sesuai dengan nomor episode
-        var videoUrl = videoUrls[i - 1];
-        changeVideoSource(videoUrl);
+        changeContentAndVideo(i);
     }
 
     tabsContainer.appendChild(tab);
